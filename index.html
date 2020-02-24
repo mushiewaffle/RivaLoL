@@ -1,0 +1,198 @@
+<html>
+	<link rel="stylesheet" type="text/css" href="{{ = URL('static/css', 'stupid.css') }}" />
+	<title>RivaLoL </title>
+	{{if show_results == False:}}
+		<div style="padding-top: 100px;">
+		<div class="center" style="background-image: url({{=random_skin.splash_url}}); opacity: 0.8; padding-top: 50px; height: 700px; width: 1215px; border: 3px solid silver;">
+	{{pass}}
+	<body style="background:black" class="black">
+		<div>
+			<div class="container center">
+				<h1>RivaLoL </h1>
+				<h6> Who is the better _____ player? </h6>
+			</div>
+
+			<div class="rounded container padded center">
+
+				<div class="third">
+					<form class="center padded">
+					   <label class="quarter center">Summoner 1</label>
+					   <input class= "silver rounded" name= "name" />
+						 <label class="quarter center">Summoner 2</label>
+					   <input class= "silver rounded" name= "name2" />
+						 <label class="quarter center">Champion</label>
+						 <select class="rounded silver" name="champs">
+				       <option>Aatrox</option><option>Ahri</option><option>Akali</option><option>Alistar</option>
+							 <option>Amumu</option><option>Anivia</option><option>Annie</option><option>Ashe</option>
+							 <option>Aurelion Sol</option><option>Azir</option><option>Bard</option><option>Blitzcrank</option>
+							 <option>Brand</option><option>Braum</option><option>Caitlyn</option><option>Camille</option>
+							 <option>Cassiopeia</option><option>ChoGath</option><option>Corki</option><option>Darius</option>
+							 <option>Diana</option><option>Dr. Mundo</option><option>Draven</option><option>Ekko</option>
+							 <option>Elise</option><option>Evelynn</option><option>Ezreal</option><option>Fiddlesticks</option>
+							 <option>Fiora</option><option>Fizz</option><option>Galio</option><option>Gangplank</option>
+							 <option>Garen</option><option>Gnar</option><option>Gragas</option><option>Graves</option>
+							 <option>Hecarim</option><option>Heimerdinger</option><option>Illaoi</option><option>Irelia</option>
+							 <option>Janna</option><option>Jarvan IV</option><option>Jax</option><option>Jayce</option>
+							 <option>Jhin</option><option>Jinx</option><option>Kai'Sa</option><option>Kalista</option><option>Karma</option>
+							 <option>Karthus</option><option>Kassadin</option><option>Katarina</option><option>Kayle</option>
+							 <option>Kayn</option><option>Kennen</option><option>KhaZix</option><option>Kindred</option>
+							 <option>Kled</option><option>KogMaw</option><option>LeBlanc</option><option>Lee Sin</option>
+							 <option>Leona</option><option>Lissandra</option><option>Lucian</option><option>Lulu</option>
+							 <option>Lux</option><option>Malphite</option><option>Malzahar</option><option>Maokai</option>
+							 <option>Master Yi</option><option>Miss Fortune</option><option>Mordekaiser</option>
+							 <option>Morgana</option><option>Nami</option><option>Nasus</option><option>Nautilus</option>
+							 <option>Nidalee</option><option>Neeko</option><option>Nocturne</option><option>Nunu & Willump</option>
+							 <option>Olaf</option><option>Orianna</option><option>Ornn</option><option>Pantheon</option>
+							 <option>Poppy</option><option>Pyke</option><option>Quinn</option><option>Rakan</option>
+							 <option>Rammus</option><option>RekSai</option><option>Renekton</option><option>Rengar</option>
+							 <option>Riven</option><option>Rumble</option><option>Ryze</option><option>Sejuani</option>
+							 <option>Shaco</option><option>Shen</option><option>Shyvana</option><option>Singed</option>
+							 <option>Sion</option><option>Sivir</option><option>Skarner</option><option>Sona</option>
+							 <option>Soraka</option><option>Swain</option><option>Syndra</option><option>Tahm Kench</option>
+							 <option>Taliyah</option><option>Talon</option><option>Taric</option><option>Teemo</option>
+							 <option>Thresh</option><option>Tristana</option><option>Trundle</option><option>Tryndamere</option>
+							 <option>Twisted Fate</option><option>Twitch</option><option>Udyr</option><option>Urgot</option>
+							 <option>Varus</option><option>Vayne</option><option>Veigar</option><option>VelKoz</option>
+							 <option>Vi</option><option>Viktor</option><option>Vladimir</option><option>Volibear</option>
+							 <option>Warwick</option><option>Wukong</option><option>Xayah</option><option>Xerath</option>
+							 <option>XinZhao</option><option>Yasuo</option><option>Yorick</option><option>Zac</option>
+							 <option>Zed</option><option>Ziggs</option><option>Zilean</option><option>Zoe</option><option>Zyra</option>
+				     </select>
+					   <label class="quarter center">Region</label>
+				     <select class="rounded silver" name="reg">
+				       <option>NA</option>
+				       <option>KR</option>
+							 <option>EUNE</option>
+				       <option>EUW</option>
+				       <option>JP</option>
+							 <option>LAN</option>
+							 <option>LAS</option>
+				       <option>OCE</option>
+				       <option>TR</option>
+							 <option>RU</option>
+							 <option>BR</option>
+				     </select>
+						 	<br></br>
+					   <input class= "blue center padded rounded" type= "submit" />
+					</form>
+				</div>
+			</div>
+
+			{{if show_results is True:}}
+
+			<div class="rounded container padded center">
+				<div class="blue quarter">
+					<div class= "center padded">
+						<img src= "{{=summoner.profile_icon.url}}" height="180" width="180">
+				    	<h5>{{=summoner.name}}</h5>
+				    	<h5>Level {{=summoner.level}}</h5>
+							<h6>S9 Ranked Solo</h6>
+							<h6>{{=solo_rank}}</h6>
+							<h6>S9 Ranked Flex</h6>
+							<h6>{{=flex_rank}}</h6>
+					</div>
+				</div>
+				<div class="blue quarter">
+					<div class= "center padded">
+						<img src= "{{=summoner2.profile_icon.url}}" height="180" width="180">
+						<h5>{{=summoner2.name}}</h5>
+						<h5>Level {{=summoner2.level}}</h5>
+						<h6>S9 Ranked Solo</h6>
+						<h6>{{=solo_rank2}}</h6>
+						<h6>S9 Ranked Flex</h6>
+						<h6>{{=flex_rank2}}</h6>
+					</div>
+				</div>
+		  </div>
+
+			<div class="rounded container padded center">
+				<div class="quarter">
+					<div class= "center" style="background-image: url({{=champ.skins[r_val3].loading_image_url}}); height: 550px; width: 305px;"></div>
+				</div>
+				<div class="quarter" style="padding-top: 100px;">
+					<div class="rounded container padded center">
+						<!-- <h4>{{=champ.name}} Champion Mastery</h4> -->
+						<div class="half">
+							<div class= "center padded">
+									<img src= "{{=champ.image.url}}" height="100" width="100">
+									<h6>{{=champ.name}}</h6>
+						    	<h6>Level {{=cm.level}}</h6>
+									<h6>{{=cm.points}} Points</h6>
+									<h6>{{=mh_len}} Games</h6>
+							</div>
+						</div>
+						<div class="rounded blue half">
+							<div class="center">
+								{{if insufficient_info == False:}}
+									<h6>Win Ratio</h6>
+									<h6>{{=int((sum_wins / mh_len) * 100)}}%</h6>
+									<h6>{{=sum_wins}}W - {{=mh_len-sum_wins}}L</h6>
+									<h6>KDA</h6>
+									<h6> {{=sum_average_kills}} / {{=sum_average_deaths}} / {{=sum_average_assists}} </h6>
+									<h6>Damage Dealt</h6>
+									<h6>{{=sum_average_damage}}</h6>
+									<h6>CS {{=sum_average_minions}}</h6>
+									<h6>Vision Score</h6>
+									<h6>{{=sum_average_vision}}</h6>
+								{{pass}}
+								{{if insufficient_info:}}
+									<h6>Not enough games played on {{=champ.name}}</h6>
+								{{pass}}
+							</div>
+						</div>
+				  </div>
+				</div>
+
+				<div class="quarter" style="padding-top: 100px;">
+					<div class="rounded container padded center">
+						<!-- <h4>Last 10 Games {{=champ.name}} Stats</h4> -->
+						<div class="rounded blue half">
+							<div class="center">
+								{{if insufficient_info2 == False:}}
+									<h6>Win Ratio</h6>
+									<h6>{{=int((sum_wins2 / mh_len2) * 100)}}%</h6>
+									<h6>{{=sum_wins2}}W - {{=mh_len2-sum_wins2}}L</h6>
+									<h6>KDA</h6>
+									<h6>{{=sum_average_kills2}} / {{=sum_average_deaths2}} / {{=sum_average_assists2}}</h6>
+									<h6>Damage Dealt</h6>
+									<h6>{{=sum_average_damage2}}</h6>
+									<h6>CS {{=sum_average_minions2}}</h6>
+									<h6>Vision Score </h6>
+									<h6>{{=sum_average_vision2}}</h6>
+								{{pass}}
+								{{if insufficient_info2:}}
+									<h6>Not enough games played on {{=champ.name}}</h6>
+								{{pass}}
+							</div>
+						</div>
+						<div class="half">
+							<div class= "center padded">
+									<img src= "{{=champ.image.url}}" height="100" width="100">
+									<h6>{{=champ.name}}</h6>
+						    	<h6>Level {{=cm2.level}}</h6>
+									<h6>{{=cm2.points}} Points</h6>
+									<h6>{{=mh_len2}} Games</h6>
+							</div>
+						</div>
+				  </div>
+				</div>
+
+				<div class="quarter">
+					<div class= "center" style="background-image: url({{=champ.skins[r_val4].loading_image_url}}); height: 550px; width: 305px;"></div>
+				</div>
+
+			</div>
+
+
+
+
+
+
+
+			{{pass}}
+
+		</div>
+	</body>
+</div>
+
+</html>
