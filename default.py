@@ -11,7 +11,7 @@ from random import randint
 
 from PIL import Image
 
-cass.set_riot_api_key("RGAPI-2e399e57-dbf7-462b-9310-e8af37176111")  # This overrides the value set in your configuration/settings.
+cass.set_riot_api_key("RGAPI-04d792ca-440d-4cf9-bb66-ed34d7c1b7c9")  # This overrides the value set in your configuration/settings.
 cass.set_default_region("NA")
 
 
