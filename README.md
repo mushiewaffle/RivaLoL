@@ -5,4 +5,5 @@ Google Charts, Html, Python, CSS. JavaScript, Riot API, and Cassiopeia are some 
 
 The website can be accessed through the following link: 
 https://mushiewaffle.github.io/RivaLoL/
+
 **Note the link above is not a working version of the website as GitHub Pages is static and cannot run python files**
