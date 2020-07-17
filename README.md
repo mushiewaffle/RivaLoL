@@ -1,3 +1,5 @@
+This project is a work in progress...
+
 This project is a player statistics website for the video game League of Legends. 
 The developer API key needs to be re-generated every few days for the website to work. 
 
