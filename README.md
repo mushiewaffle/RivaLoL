@@ -1,4 +1,4 @@
-This was done in collaboration with a partner for our final project in CSE183, a Full-Stack web development course at UCSC.
+This was done in collaboration with a partner for our final project in CSE183, a Full-Stack web development course at UCSC.</br>
 Last updated June 2019.
 
 This project is a player statistics website for the video game League of Legends. 
